@@ -1,27 +1,6 @@
 {
   "courses": [
     {
-      "id": 1,
-      "title": "Securing React Apps with Auth0",
-      "slug": "react-auth0-authentication-security",
-      "authorId": 1,
-      "category": "JavaScript"
-    },
-    {
-      "id": 2,
-      "title": "React: The Big Picture",
-      "slug": "react-big-picture",
-      "authorId": 1,
-      "category": "JavaScript"
-    },
-    {
-      "id": 3,
-      "title": "Creating Reusable React Components",
-      "slug": "react-creating-reusable-components",
-      "authorId": 1,
-      "category": "JavaScript"
-    },
-    {
       "id": 4,
       "title": "Building a JavaScript Development Environment",
       "slug": "javascript-development-environment",
@@ -69,62 +48,6 @@
       "slug": "web-components-shadow-dom",
       "authorId": 1,
       "category": "HTML5"
-    },
-    {
-      "id": 11,
-      "slug": "react-hooks",
-      "title": "React Hooks",
-      "authorId": 1,
-      "category": "JavaScript",
-      "createdAt": 1637290138587
-    },
-    {
-      "id": 12,
-      "slug": "react-hooks",
-      "title": "React Hooks",
-      "authorId": 1,
-      "category": "JavaScript",
-      "createdAt": 1637290142834
-    },
-    {
-      "id": 13,
-      "slug": "react-hooks",
-      "title": "React Hooks",
-      "authorId": 1,
-      "category": "JavaScript",
-      "createdAt": 1637290143693
-    },
-    {
-      "id": 14,
-      "slug": "qwerty",
-      "title": "QWERTY",
-      "authorId": 3,
-      "category": "JavaScript",
-      "createdAt": 1637290853078
-    },
-    {
-      "id": 15,
-      "slug": "new-js-course",
-      "title": "New JS Course",
-      "authorId": 2,
-      "category": "Js Complete",
-      "createdAt": 1637290993311
-    },
-    {
-      "id": 16,
-      "slug": "dfhgvjbk",
-      "title": "dfhgvjbk",
-      "authorId": 3,
-      "category": "xtrcyfvghbj",
-      "createdAt": 1637291385419
-    },
-    {
-      "id": 17,
-      "slug": "sxdfgbgh",
-      "title": "sxdfgbgh",
-      "authorId": 3,
-      "category": "cdvfghn",
-      "createdAt": 1637291916603
     }
   ],
   "authors": [
