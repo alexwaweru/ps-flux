@@ -1,8 +1,9 @@
 import React, { useState, useEffect } from "react";
 import CourseForm from "./CourseForm";
-import { getAuthors } from "../api/authorApi";
 import { toast } from "react-toastify";
+import authorStore from "../stores/authorStore";
 import courseStore from "../stores/courseStore";
+import * as authorActions from "../actions/authorAction";
 import * as courseActions from "../actions/courseAction";
 
 const ManageCoursePage = (props) => {
@@ -15,14 +16,22 @@ const ManageCoursePage = (props) => {
     authorId: null,
     category: "",
   });
-  const [authorListSelectOptions, setAuthorListSelectOptions] = useState([]);
+  const [authorSelectOptions, setAuthorSelectOptions] = useState([]);
 
+  // Handle authors dropdown list change
   useEffect(() => {
-    getAuthors()
-      .then((authorList) => setAuthorListSelectOptions(authorList))
-      .catch((_error) => console.log(_error));
-  }, []);
+    authorStore.addChangeListener(onAuthorsChange);
+    if (authorSelectOptions.length === 0) {
+      authorActions.loadAuthors();
+    }
+    return () => authorStore.removeChangeListener(onAuthorsChange);
+  }, [authorSelectOptions.length]);
 
+  const onAuthorsChange = () => {
+    setAuthorSelectOptions(authorStore.getAuthors());
+  };
+
+  // Handle courses and course changes
   useEffect(() => {
     courseStore.addChangeListener(onChange);
     const slug = props.match.params.slug; // get slug from the path `/courses/:slug`
@@ -72,7 +81,7 @@ const ManageCoursePage = (props) => {
         course={course}
         onChange={handleChange}
         onSubmit={handleSubmit}
-        authorListSelectOptions={authorListSelectOptions}
+        authorListSelectOptions={authorSelectOptions}
       />
     </>
   );
